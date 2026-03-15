@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; background-color:black;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Minecraft 1.12.2 Mobile (Custom CDN)</title>
+
+    <script type="text/javascript">
+    window.addEventListener("load", function() {
+        if((typeof WebAssembly !== "undefined") && (typeof WebAssembly.Suspending !== "undefined")) {
+            var el = document.getElementById("eaglerWASMAvailable");
+            if("true" === window.localStorage.getItem("hideEaglerWASMAvailable")) return;
+            el.style.display = "block";
+            document.getElementById("eaglerWASMAvailableYes").addEventListener("click", function() {
+                window.localStorage.setItem("hideEaglerWASMAvailable", "true");
+                document.location.href = "https://eaglercraft.com/mc/1.12.2-wasm/";
+            });
+            document.getElementById("eaglerWASMAvailableNo").addEventListener("click", function() {
+                window.localStorage.setItem("hideEaglerWASMAvailable", "true");
+                el.style.display = "none";
+            });
+        }
+    });
+    </script>
+
+    <script type="text/javascript">
+    window.disableUserscripts = true;
+    window.__eaglercraftLoaderClient = {
+        container: "game_frame",
+        name: "Eaglercraft 1.12",
+        file: "net.peytonplayz585.eaglercraft.v1_12.client",
+        cid: "bafybeidrnchyech7b26rqhm3tayt7p6mxvl23lzd4f5mcyqda7hbrzyal4",
+        path: "",
+        /* Points to your repository for the heavy data file */
+        download: "https://cdn.jsdelivr.net/gh/67withadawg-rgb/Ixlmath@main/data/1.12.2.gz",
+        dlSize: 15601341,
+        gzip: true
+    };
+    </script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/67withadawg-rgb/Ixlmath@main/shared/loader.js"></script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; 
+            position: fixed; 
+            background-color: black;
+        }
+        #game_frame {
+            width: 100vw;
+            height: 100dvh; 
+        }
+        .modal-box {
+            margin: 10px; 
+            border: 2px solid white; 
+            padding: 15px; 
+            background-color: #222; 
+            color: white; 
+            text-align: center; 
+            font-family: sans-serif;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eaglerWASMAvailable" style="display:none; position:absolute; width: 100%; z-index:1000;">
+        <div class="modal-box">
+            <h3>WASM is available!</h3>
+            <p>Faster FPS, but uses more RAM.</p>
+            <button id="eaglerWASMAvailableYes">Use WASM</button>
+            <button id="eaglerWASMAvailableNo">Stay on JS</button>
+        </div>
+    </div>
+
+    <div id="game_frame"></div>
+</body>
+</html>
